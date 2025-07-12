@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help Me Build</title>
+  <style>
+    
+/* Global Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .text-6xl, .text-8xl {
+        font-size: 3rem;
+    }
+    
+    .text-5xl {
+        font-size: 2.5rem;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus Styles */
+button:focus,
+a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+
+
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        
+
+
+          @keyframes float3D {
+            0%, 100% { 
+              transform: rotateY(0deg) rotateX(0deg) translateY(0px);
+            }
+            25% { 
+              transform: rotateY(90deg) rotateX(5deg) translateY(-10px);
+            }
+            50% { 
+              transform: rotateY(180deg) rotateX(0deg) translateY(0px);
+            }
+            75% { 
+              transform: rotateY(270deg) rotateX(-5deg) translateY(-10px);
+            }
+          }
+        
+
+
+          .luxury-header {
+            background: linear-gradient(135deg, rgba(0,0,0,0.95) 0%, rgba(20,20,20,0.95) 100%);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(212,175,55,0.2);
+          }
+          
+          .logo-container h1 {
+            background: linear-gradient(135deg, #d4af37 0%, #ffd700 50%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(212,175,55,0.3);
+          }
+          
+          .nav-link {
+            position: relative;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+          }
+          
+          .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: linear-gradient(90deg, #d4af37, #ffd700);
+            transition: width 0.3s ease;
+          }
+          
+          .nav-link:hover::after {
+            width: 100%;
+          }
+          
+          .cart-count {
+            animation: pulse 2s infinite;
+          }
+          
+          @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+          }
+        
+
+
+          .luxury-hero {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+            position: relative;
+          }
+          
+          .bg-gradient {
+            background: radial-gradient(ellipse at center, rgba(212,175,55,0.1) 0%, transparent 70%);
+          }
+          
+          .floating-particles {
+            background-image: 
+              radial-gradient(2px 2px at 20px 30px, rgba(212,175,55,0.3), transparent),
+              radial-gradient(2px 2px at 40px 70px, rgba(255,215,0,0.2), transparent),
+              radial-gradient(1px 1px at 90px 40px, rgba(212,175,55,0.4), transparent);
+            background-repeat: repeat;
+            background-size: 200px 100px;
+            animation: float 20s linear infinite;
+          }
+          
+          @keyframes float {
+            0% { transform: translateY(0px) translateX(0px); }
+            33% { transform: translateY(-10px) translateX(10px); }
+            66% { transform: translateY(5px) translateX(-5px); }
+            100% { transform: translateY(0px) translateX(0px); }
+          }
+          
+          .hero-title {
+            line-height: 0.9;
+            text-shadow: 0 0 50px rgba(212,175,55,0.3);
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+          }
+          
+          .hero-subtitle {
+            animation: fadeInUp 1s ease-out 0.8s forwards;
+          }
+          
+          .hero-actions {
+            animation: fadeInUp 1s ease-out 1.1s forwards;
+          }
+          
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          
+          .cta-primary {
+            box-shadow: 0 10px 30px rgba(212,175,55,0.3);
+            border-radius: 0;
+            letter-spacing: 1px;
+          }
+          
+          .cta-secondary {
+            border-radius: 0;
+            letter-spacing: 1px;
+            backdrop-filter: blur(10px);
+          }
+        
+
+
+          .product-card {
+            transition: transform 0.3s ease;
+          }
+          
+          .product-card:hover {
+            transform: translateY(-10px);
+          }
+          
+          .product-model {
+            animation: float3D 6s ease-in-out infinite;
+            transform-style: preserve-3d;
+          }
+          
+          @keyframes float3D {
+            0%, 100% { 
+              transform: rotateY(0deg) rotateX(0deg) translateY(0px);
+            }
+            25% { 
+              transform: rotateY(90deg) rotateX(5deg) translateY(-10px);
+            }
+            50% { 
+              transform: rotateY(180deg) rotateX(0deg) translateY(0px);
+            }
+            75% { 
+              transform: rotateY(270deg) rotateX(-5deg) translateY(-10px);
+            }
+          }
+          
+          .product-glow {
+            animation: pulse-glow 3s ease-in-out infinite;
+          }
+          
+          @keyframes pulse-glow {
+            0%, 100% { opacity: 0.2; transform: scale(1.5); }
+            50% { opacity: 0.4; transform: scale(1.8); }
+          }
+          
+          .add-to-cart {
+            position: relative;
+            overflow: hidden;
+          }
+          
+          .add-to-cart::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+          }
+          
+          .add-to-cart:hover::before {
+            left: 100%;
+          }
+        
+  </style>
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Build Luxery Fashiontv</title>
+    <meta name="description" content="Premium ecommerce built with CodeForge AI">
+    <meta name="keywords" content="luxury, cosmetics, beauty, 3d, premium">
+    
+    <!-- Dependencies -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
+    <!-- Custom Styles -->
+    <style>
+        /* Global Variables */
+        :root {
+            --primary-color: #d4af37;
+            --secondary-color: #000000;
+            --accent-color: #ffd700;
+            --font-family: Georgia, serif;
+        }
+        
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            color: #ffffff;
+            background: #000000;
+        }
+        
+        /* Utility Classes */
+        .text-gold { color: #d4af37; }
+        .bg-gold { background-color: #d4af37; }
+        .border-gold { border-color: #d4af37; }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-color);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+          <header class="luxury-header fixed w-full z-50 bg-black/90 backdrop-blur-xl border-b border-gold/20">
+            <div class="container mx-auto px-6 py-4">
+              <nav class="flex items-center justify-between">
+                <div class="logo-container">
+                  <h1 class="text-2xl font-serif text-gold tracking-wider">LUXE BEAUTY</h1>
+                </div>
+                <div class="nav-links hidden md:flex space-x-8">
+                  <a href="#" class="nav-link text-white hover:text-gold transition-all duration-300">Collections</a>
+                  <a href="#" class="nav-link text-white hover:text-gold transition-all duration-300">Skincare</a>
+                  <a href="#" class="nav-link text-white hover:text-gold transition-all duration-300">Makeup</a>
+                  <a href="#" class="nav-link text-white hover:text-gold transition-all duration-300">Fragrance</a>
+                </div>
+                <div class="header-actions flex items-center space-x-4">
+                  <button class="search-btn p-2 text-white hover:text-gold transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                  </button>
+                  <button class="cart-btn relative p-2 text-white hover:text-gold transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01"></path>
+                    </svg>
+                    <span class="cart-count absolute -top-1 -right-1 bg-gold text-black text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                  </button>
+                </div>
+              </nav>
+            </div>
+          </header>
+        
+
+          <section class="luxury-hero relative min-h-screen flex items-center justify-center overflow-hidden">
+            <div class="hero-background absolute inset-0">
+              <div class="bg-gradient absolute inset-0"></div>
+              <div class="floating-particles absolute inset-0"></div>
+            </div>
+            
+            <div class="hero-content relative z-10 text-center max-w-4xl mx-auto px-6">
+              <h1 class="hero-title text-6xl md:text-8xl font-serif text-white mb-6 opacity-0">
+                Redefine
+                <span class="text-gold block">Beauty</span>
+              </h1>
+              <p class="hero-subtitle text-xl md:text-2xl text-gray-300 mb-8 opacity-0 font-light">
+                Discover our exclusive collection of premium cosmetics crafted for the modern woman
+              </p>
+              <div class="hero-actions space-x-4 opacity-0">
+                <button class="cta-primary bg-gold text-black px-8 py-4 text-lg font-medium hover:bg-gold/90 transition-all duration-300 transform hover:scale-105">
+                  Explore Collection
+                </button>
+                <button class="cta-secondary border border-white text-white px-8 py-4 text-lg font-medium hover:bg-white hover:text-black transition-all duration-300">
+                  Watch Story
+                </button>
+              </div>
+            </div>
+            
+            <div class="scroll-indicator absolute bottom-8 left-1/2 transform -translate-x-1/2">
+              <div class="scroll-arrow animate-bounce">
+                <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+              </div>
+            </div>
+          </section>
+        
+
+          <section class="product-showcase py-20 bg-black">
+            <div class="container mx-auto px-6">
+              <div class="text-center mb-16">
+                <h2 class="text-5xl font-serif text-white mb-4">Featured Collection</h2>
+                <p class="text-xl text-gray-400">Experience luxury in every detail</p>
+              </div>
+              
+              <div class="products-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="product-card group cursor-pointer">
+                  <div class="product-image-container relative overflow-hidden bg-gradient-to-br from-gray-900 to-black rounded-lg">
+                    <div class="product-3d-viewer h-80 flex items-center justify-center">
+                      <div class="product-model w-48 h-48 bg-gradient-to-br from-pink-500 via-purple-500 to-gold rounded-full relative">
+                        <div class="product-reflection absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent rounded-full"></div>
+                        <div class="product-glow absolute inset-0 bg-gold/20 rounded-full blur-xl scale-150"></div>
+                      </div>
+                    </div>
+                    <div class="product-overlay absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                      <button class="view-3d-btn bg-gold text-black px-6 py-3 font-medium transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                        View in 3D
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-info mt-6 text-center">
+                    <h3 class="text-xl font-medium text-white mb-2">Luxury Lipstick Collection</h3>
+                    <p class="text-gray-400 mb-4">Premium matte finish with 24-hour wear</p>
+                    <div class="price text-2xl font-light text-gold mb-4">$89.00</div>
+                    <button class="add-to-cart w-full bg-transparent border border-gold text-gold py-3 hover:bg-gold hover:text-black transition-all duration-300">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                
+                <div class="product-card group cursor-pointer">
+                  <div class="product-image-container relative overflow-hidden bg-gradient-to-br from-gray-900 to-black rounded-lg">
+                    <div class="product-3d-viewer h-80 flex items-center justify-center">
+                      <div class="product-model w-48 h-48 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-lg relative transform rotate-12">
+                        <div class="product-reflection absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent rounded-lg"></div>
+                        <div class="product-glow absolute inset-0 bg-blue-500/20 rounded-lg blur-xl scale-150"></div>
+                      </div>
+                    </div>
+                    <div class="product-overlay absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                      <button class="view-3d-btn bg-gold text-black px-6 py-3 font-medium transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                        View in 3D
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-info mt-6 text-center">
+                    <h3 class="text-xl font-medium text-white mb-2">Hydrating Serum</h3>
+                    <p class="text-gray-400 mb-4">Advanced anti-aging formula with peptides</p>
+                    <div class="price text-2xl font-light text-gold mb-4">$156.00</div>
+                    <button class="add-to-cart w-full bg-transparent border border-gold text-gold py-3 hover:bg-gold hover:text-black transition-all duration-300">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                
+                <div class="product-card group cursor-pointer">
+                  <div class="product-image-container relative overflow-hidden bg-gradient-to-br from-gray-900 to-black rounded-lg">
+                    <div class="product-3d-viewer h-80 flex items-center justify-center">
+                      <div class="product-model w-48 h-48 bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 rounded-full relative">
+                        <div class="product-reflection absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent rounded-full"></div>
+                        <div class="product-glow absolute inset-0 bg-amber-500/20 rounded-full blur-xl scale-150"></div>
+                      </div>
+                    </div>
+                    <div class="product-overlay absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                      <button class="view-3d-btn bg-gold text-black px-6 py-3 font-medium transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                        View in 3D
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-info mt-6 text-center">
+                    <h3 class="text-xl font-medium text-white mb-2">Signature Fragrance</h3>
+                    <p class="text-gray-400 mb-4">Exclusive blend of rare botanicals</p>
+                    <div class="price text-2xl font-light text-gold mb-4">$245.00</div>
+                    <button class="add-to-cart w-full bg-transparent border border-gold text-gold py-3 hover:bg-gold hover:text-black transition-all duration-300">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        
+
+    <footer class="bg-black text-white py-8 mt-16">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">Built with CodeForge AI - Premium Template System</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Template-specific JavaScript will be injected here
+    </script>
+</body>
+</html>
+  <script>
+    
+  </script>
+</body>
+</html>
