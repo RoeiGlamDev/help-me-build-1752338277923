@@ -1,0 +1,10 @@
+{
+  "name": "help-me-build-1752338277923",
+  "version": "1.0.0",
+  "description": "help me build luxery FashionTV cosmetic website that will have luxery deisgn of pink and white colors, i want it to have home page, products page, checkout",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve -s .",
+    "build": "echo \"Static site - no build needed\""
+  }
+}
